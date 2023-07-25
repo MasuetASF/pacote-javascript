@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Page Title</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <script>
+    function mudaCor(corEscolhida){
+      document.getElementById("caixa").style.background = corEscolhida
+    }
+    function mudaEstilo(){
+    var cor = document.getElementById("select").value
+    document.getElementById("caixa").style.background = cor
+
+  }
+  </script>
+
+  
+
+</head>
+<body>
+  <h3>Manipulando estilos</h3>
+
+  <select onchange="mudaEstilo()" name="" id="select">
+    <option value="">Selecione a cor</option>
+    <option value="red">Vermelho</option>
+    <option value="green">Verde</option>
+    <option value="blue">Azul</option>
+
+  </select>
+
+  <button type="button" onclick="mudaCor('#FF0000')">Vermelho</button>
+  <button type="button" onclick="mudaCor('#00FF00')">Verde</button>
+  <button type="button" onclick="mudaCor('#0000FF')">Azul</button>
+
+  <hr>
+
+
+  <div style="border: solid 1px; width: 100px; height: 100px;" id="caixa">
+
+  </div>
+
+</body>
+</html>

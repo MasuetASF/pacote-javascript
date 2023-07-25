@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Page Title</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <script> 
+    function focoMudaCor(){
+      document.getElementById("caixa").style.background = "yellow"
+    }
+
+
+    function verifica(){
+
+      var valorCampo = document.getElementById("caixa").value
+
+      if (valorCampo.length < 3 ) {
+        document.getElementById("caixa").style.background = "red"
+      }else{
+        document.getElementById("caixa").style.background = "green"
+      }
+    }
+  
+  </script>
+</head>
+<body>
+    <input 
+      type="text" 
+      onfocus="focoMudaCor()"
+      onblur="verifica()"
+      id="caixa">
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Page Title</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <script>
+
+    var listaConvidados1 = ['Jorge', 'Jamilton', 'José', 'Ana', 'Maria']
+
+    var listaConvidados2 = Array()
+    
+    listaConvidados2['a'] = 'Jorge'
+    listaConvidados2[10] = 'Jamilton'
+    listaConvidados2['zebra'] = 'José'
+    listaConvidados2[-1] = 'Ana'
+    listaConvidados2[true] = 'Maria'
+    
+
+    console.log(listaConvidados2)
+
+    //A estrutura for in é uma boa opção quando se tem variados tipos
+    //de variáveis, ex: string, int, boolean.
+    
+    //Nessa estrutura, a var x recebe o índice do array,
+    // seja ele qual for
+
+    //O exemplo a seguir mostra como é feita essa interação:
+    for( var x in listaConvidados2){
+      console.log('Índice ' + x + ' valor ' + listaConvidados2[x])
+    }
+
+    //como resultado teremos:
+    // Índice 10 valor Jamilton
+    // Índice a valor Jorge
+    // Índice zebra valor José
+    // Índice -1 valor Ana
+    // Índice true valor Maria
+
+
+
+    //laço for in em um array de um unico tipo,
+    //nesse caso índices de 0 a 4, e valores em string.
+    for( var x in listaConvidados1){
+      console.log('Índice ' + x + ' valor ' + listaConvidados1[x])
+    }
+
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

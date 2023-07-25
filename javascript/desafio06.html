@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Page Title</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <script>
+
+    var objetos = Array('Cadeira', 'Impressora', 'Garfo')
+    
+    //função para vidalidar dados
+    function validaObjeto() {
+
+     //recebe os parametros informados pelo usuário
+     var cTexto = document.getElementById("myText").value;
+     
+     //verifica se os parametros informados pelo usuário
+     //já existem no array
+     var aux = objetos.indexOf(cTexto)
+
+     //verifica se o campo texto(cTexto) está vazio
+     //se verdadeiro, dispara um alerta para o usuario
+     if (cTexto === '' ) {
+        alert('Informe um valor válido')
+
+        //se não existir,
+        //faz a inclusão através do método push()
+      } else if (aux === -1 ) {
+        objetos.push(cTexto)
+        //se já adicionado,
+        //dispara alerta para o usuario
+        }else{
+          alert('Objeto já foi adicionado')
+        }
+        console.log(cTexto)
+        console.log(objetos)
+
+        //limpa o input(campo de texto do usuário)
+        document.getElementById("myText").value = ''
+    }
+     
+    //função com objetivo de ordenação alfanumérica
+    // dos elementos do array através do método sort()
+     function ordenaObjeto(){
+      var ordenado = objetos.sort()
+
+      //imprimeindo na tela o array
+      document.getElementById("objordenado").innerHTML = ordenado
+      console.log(ordenado)
+    }
+    
+
+  </script>
+</head>
+<body>
+
+  <div>
+    <!-- Recebendo os valores -->
+    <input type="text" id="myText">
+    <button onclick="validaObjeto()"  
+            id="">
+            Adicionar
+    </button>
+    
+
+    <!-- Ordenando o array -->
+    <button 
+      onclick="ordenaObjeto()"  
+      id="">
+      Ordenar
+    </button>
+    <p id="objordenado"> </p>
+
+
+
+
+  <!-- Atividade prostopa:
+
+  1) Crie uma aplicação web contendo um campo para entrada de texto (input text) e dois
+  botões (buttons), sendo um botão com a descrição  "Adicionar" e outro com a descrição
+  "Ordenar" 
+
+  Após criar os elementos de interação com o usuário acima, crie um Array de nome objetos contendo
+  os seguintes valores:
+  var objetos = Array('Cadeira', 'Impressora', 'Garfo')
+
+  Os próximos passos são:
+
+  A) Ao clicar no botão "Adicionar" disparar função que irá:
+  • Recuperar o valor contido no campo de texto.
+  • Verificar se o valor está vazio ou preenchido.
+    o Se vazio, exibir alert com a mensagem "Informe um valor válido".
+    o Se preenchido:
+    ▪ Verificar se o valor informado já existe dentro do Array objetos.
+    ▪ Se existir, exibir alert com a mensagem "Objeto já foi adicionado".
+    ▪ Se não existir:
+      • Incluir o valor preenchido no campo dentro do Array.
+      • Efetuar um console.log do Array para debug (checar se está
+      funcionado).
+      • Limpar o valor contido no campo de entrada de texto.
+
+  B) Ao clicar no botão "Ordenar" disparar função que irá:
+  • Ordenar de forma alfabética os valores do Array de objetos.
+  • Efetuar um console.log do Array para debug (checar se está funcionado). -->
+
+  </div>
+    
+</body>
+</html>

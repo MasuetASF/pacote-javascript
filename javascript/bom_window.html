@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>window</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <script>
+
+    var janela 
+
+    function abrirPopUp() {
+
+      //SINTAXE: window.open(URL, name, specs, replace)
+        
+      janela = window.open('fff.html', 'new_window', 'width=500, height=300, top=300,left=500')
+    }
+
+    function fecharPopUp(){
+      janela.close()
+    }
+    
+
+  </script>
+</head>
+<body>
+
+  <!-- 
+    Criamos um butão com onclick chamando sua função
+  -->
+  <button onclick="abrirPopUp()">
+    Abrir Janela
+  </button>
+  <button onclick="fecharPopUp()">
+    Fechar Janela
+  </button>
+  <button onclick="window.print()">
+    Imprimir
+  </button>
+
+</body> 
+</html>

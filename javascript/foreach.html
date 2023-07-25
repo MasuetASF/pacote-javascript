@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Page Title</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <script>
+
+    var listaFuncionarios = ['Viviane', 'Rosangela', 'Miguel', 'Lucas', 'Fernando']
+
+
+
+    //forEach percorre todo o array através de uma função de callback
+    //nesse caso: 
+    //        function(valor, indice, array)
+    // valor => aqui refere ao valor dos elementos 
+    //          do array( parametros do tipo string por padrão)
+    // indice => aqui refere aos indices dos elementos
+    //          do array (parametro do tipo number)
+    //array => aqui referece ao array 
+    //         (parametro do tipo array:string[])
+
+    //OBS: Os valores valor, indice, array poderiam ser 
+    //     alterados por x, y, z. O mesmo informado 
+    //     acima se aplica aqui 
+
+
+    /*
+    console.log(listaFuncionarios)
+    document.write(listaFuncionarios[3])
+    
+    listaFuncionarios.forEach(function(valor, indice, array) {
+      //logica
+      console.log('indice ' + indice + ' | valor: ' + valor )
+
+      if (valor == 'Lucas') {
+        array[indice] = 'um novo valor'
+      }
+      
+    });
+
+    console.log(listaFuncionarios)
+    document.write('<br />' +listaFuncionarios[3])
+    */
+    
+    /*
+    // Parametros variaveis
+    var lista_coisas = ['lapis', 'celular', 'cadeira']
+    
+    // Wrapper
+    var f = function(valor){      
+        console.log(valor)
+      }
+
+    listaFuncionarios.forEach(f)
+    lista_coisas.forEach(f)
+
+    //fim Parametros variaveis
+    
+    */
+    
+    
+
+      //PARTICULARIDADES
+
+    //uma particularidade sobre o forEach é que ele só exibe indices
+    //a partir do valor 0
+    //Nesse caso, criamos um array com indices variados para demonstrar
+    var lista_pessoas = Array()
+    lista_pessoas['x'] = 'Vivi'
+    lista_pessoas[false] = 'Rosa'
+    lista_pessoas[3] = 'Miguel'
+    lista_pessoas[27] = 'Lu'
+    lista_pessoas[-12] = 'Nando'
+
+    // Wrapper
+    var f = function(valor,indice){      
+        console.log(valor, indice)
+      }
+    
+    lista_pessoas.forEach(f)
+    //Como resultado teremos no console apenas os indices [3] e [27]
+    //visto que são os únicos do array que respeita as requisições
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

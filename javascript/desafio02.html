@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Page Title</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <script>
+    var idade = prompt('Digite a sua idade: ')
+    var idade_int = parseInt(idade)
+
+
+    if (idade >= 0 && idade < 15) 
+      {
+        document.write('Criança')
+      } else if (idade >= 15 && idade < 30) 
+        {
+          alert('Jovem')
+        } else if (idade >= 30 && idade < 60) 
+          {
+            alert('Aduto')
+          } else if (idade >= 60) 
+            {
+              alert('Idoso')
+            } else {
+              document('Valor informado incorretamente. Escolha um valor NUMERICO a parte de 0')
+            }
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

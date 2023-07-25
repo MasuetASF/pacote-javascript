@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Page Title</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <script>
+   
+   //2 maneiras de escrita de arrrays manipulando indices:
+
+   // var lista_frutas = Array()
+   var lista_frutas = []
+
+    lista_frutas[6] = 'Banana'
+    lista_frutas[7] = true
+    lista_frutas[8] = 'Morango'
+    lista_frutas[9] = 100
+
+
+    //Para saber a quantidade exata de elementos tem dentro do Array:
+    function size(array){
+      var size = 0
+      array.forEach(function() {
+        size++
+      });
+      return size
+    }
+    document.write(size(lista_frutas))
+  
+
+  //passando diretamente os valores dos arrays:
+  //indices do array formado por padrão iniciam pelo valor 0 
+
+
+  //var lista_frutas = Array('Banana', 'Maçã', 'Morango', 'Uva')
+  //var lista_frutas = ['Banana', 'Maçã', 'Morango', 'Uva']
+
+    console.log(lista_frutas)
+
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
